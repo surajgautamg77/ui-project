@@ -1,0 +1,457 @@
+
+/*
+=============== 
+Variables
+===============
+*/
+
+:root {
+    --clr-primary-1: #ff79a2;
+    --clr-primary-1-dark: #ee2763;
+    --clr-primary-2: #e5f8fe;
+    --clr-primary-3: #65c8e8;
+    --clr-primary-gray: #e5f8fe;
+    --clr-white: #ffffff;
+    --clr-text:rgb(12, 11, 11);
+    --clr-heading:#000;
+    --ff-primary: "Raleway",
+    sans-serif;
+    --spacing: 0.15rem;
+    --radius: 0.5rem;
+}
+
+/*
+=============== 
+Global Styles
+===============
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--ff-primary);
+    background: rgb(240, 238, 238);
+    color: var(--clr-text);
+    line-height: 1.5;
+    font-size: 0.875rem;
+}
+
+
+img{
+    width: 100%;
+    display: block;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    letter-spacing: var(--spacing);
+    text-transform: capitalize;
+    line-height: 1.25;
+    margin-bottom: 0.75rem;
+}
+
+
+a{
+    text-decoration: none;
+}
+
+@media screen and (min-width: 800px) {
+    h1 {
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    h3 {
+        font-size: 1.75rem;
+    }
+
+    h4 {
+        font-size: 1rem;
+    }
+
+    body {
+        font-size: 1rem;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+        line-height: 1;
+    }
+}
+
+.btn {
+    text-transform: uppercase;
+    background: var(--clr-primary-1);
+    color: var(--clr-white);
+    padding: 0.375rem 0.75rem;
+    display: inline-block;
+    font-size: 0.875rem;
+    border: 2px solid transparent;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    border-radius: var(--radius);
+}
+
+.btn:hover {
+   
+    background: var(--clr-primary-1-dark);
+}
+
+.section{
+    margin: 2rem 0;
+}
+
+.section-center {
+    width: 85vw;
+    margin: 0 auto;
+    max-width: 1170px;
+}
+
+@media screen and (min-width: 992px) {
+    .section-center {
+        width: 90vw;
+    }
+}
+
+/*
+=============== 
+My Styles
+===============
+*/
+
+/* nav bar start*/
+.navbar{
+    font-family: 'Radio Canada',
+    sans-serif;
+    text-transform: uppercase;
+}
+.nav-container{
+display: -webkit-box;
+display: flex;
+-webkit-box-orient: vertical;
+-webkit-box-direction: normal;
+        flex-direction: column;
+gap: 2rem;
+}
+
+.logo{
+    width: 40%;
+    margin: 0 auto;
+    padding-top: 1rem;
+}
+.nav-links{
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    gap: 1rem;
+    -webkit-box-pack: justify;
+            justify-content: space-between;   
+}
+.nav-links a:hover {
+   
+    background: var(--clr-primary-gray);
+    color: #ffffff;
+}
+/* cart */
+.badge:after {
+    content: attr(value);
+    font-size: 12px;
+    color: #fff;
+    background: rgb(0, 0, 0);
+    border-radius: 50%;
+    padding: 0 5px;
+    position: relative;
+    left: -8px;
+    top: -10px;
+    opacity: 0.9;
+}
+@media screen and (min-width: 768px) {
+    .nav-container{
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+                flex-direction: row;
+        -webkit-box-pack: justify;
+                justify-content: space-between;
+        -webkit-box-align: center;
+                align-items: center;
+    }
+    .logo{
+        width: 100%;
+    }
+    .nav-links{
+       
+       -webkit-box-orient: horizontal;
+       
+       -webkit-box-direction: normal;
+       
+               flex-direction: row;
+    }
+}
+/* nav bar end*/
+/* banner start*/
+.banner{
+    background: var(--clr-primary-1);
+    min-height: -webkit-fit-content;
+    min-height: -moz-fit-content;
+    min-height: fit-content;
+}
+
+
+.banner-right{
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+            align-items: center;
+   
+}
+
+.log-box {
+    background: var(--clr-white);
+    width: 90%;
+    margin: 6rem auto;
+    border-radius: var(--radius);
+
+}
+
+.log-btn{
+    background: transparent;
+    border: transparent;
+    text-transform: capitalize;
+    width: 49.5%;
+    margin: 0 auto;
+    font-family: 'Radio Canada',
+    sans-serif;
+    font-weight: 700;
+    font-size: larger;
+    padding: 1.5rem 0;
+   ;
+}
+.log-btn:active, .log-btn:hover  {
+    background-color: #ededed;
+}
+.log-txt{
+    padding: 2rem 3rem;
+    text-align: justify;
+}
+.log-txt h3{
+    font-family: 'Radio Canada',
+    sans-serif;
+}
+.create-account-btn{
+    margin: 0 0 2rem 3rem;
+    border-radius: var(--radius);
+}
+
+.sign-up-btn{
+    border-top-left-radius: var(--radius);
+
+}
+.log-in-btn {
+    border-top-right-radius: var(--radius);
+
+}
+.nav-links a:hover{
+    color: var(--clr-primary-1);
+}
+
+@media screen and (min-width: 768px) {
+   .banner-container{
+        display: -webkit-box;
+        display: flex;
+        -webkit-box-align: center;
+                align-items: center;
+        gap: 2rem;
+        color: var(--clr-heading);
+   }
+.banner {
+    min-height: 100vh;
+    background: url("GettyImages-650162993.png") center/cover no-repeat;
+}
+.banner-left {
+    width: 30%;
+}
+
+.banner-right {
+    width: 70%;
+    height: 100vh;
+    background: -webkit-gradient(linear, left top, right top, from(rgb(0, 0, 0, 0)), to(rgb(235, 155, 155)));
+    background: linear-gradient(to right, rgb(0, 0, 0, 0), rgb(235, 155, 155));
+    position: relative;
+}
+.log-box {
+    width: 50%;
+}
+}
+/* banner*/
+
+/* footer start */
+
+.footer{
+    background: var(--clr-primary-2);
+}
+.footer-icons{
+display: -webkit-box;
+display: flex;
+-webkit-box-pack: center;
+        justify-content: center;
+gap: 3rem;
+}
+.footer-icon{
+    width: 2rem;
+    height: 2rem;
+    background: var(--clr-primary-3);
+    color: white;
+    display: -webkit-box;
+    display: flex;
+    border-radius: 50%;
+    display: flex;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+            align-items: center;
+    
+}
+.footer-icon i{
+    color:var(--clr-white)
+}
+.footer-box{
+    text-align: center;
+}
+.footer-copyright-container{
+text-align: center;
+padding: 2rem 0;
+}
+
+.footer-t-and-c{
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+            justify-content: center;
+    gap: 3rem;
+}
+
+@media screen and (min-width: 768px) {
+    .footer-container {
+        display: -webkit-box;
+        display: flex;
+        gap: 2rem;
+       
+    }
+    .footer-icons{
+       -webkit-box-pack: start;
+               justify-content: flex-start;
+    }
+    .footer-box {
+        text-align: justify;
+    }
+    .footer-copyright-container {
+        display: -webkit-box;
+        display: flex;
+        justify-content: space-around;       
+    }
+    
+}
+/* footer end */
+/*
+=============== 
+class list
+===============
+*/
+
+/* .line{
+    width: 100%;
+    height: 1.5px;
+    background: var(--clr-text);
+}
+.arrow-down{
+    color: var(--clr-primary-1);
+} */
+
+.class-list-content{
+    display: -webkit-box;
+    display: flex;
+    justify-content: space-around;
+   
+}
+
+.content-list{
+    display: -webkit-box;
+    display: flex;
+    gap: 1rem;
+    background: var(--clr-white);
+    padding: 1rem;
+    border-radius: var(--radius);
+}
+
+.date {
+    margin: 0 0 1rem 0;
+}
+
+.price{
+    display: -webkit-box;
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Radio Canada',
+        sans-serif;
+    font-weight: bolder;
+    margin: 2rem 0;
+}
+@media screen and (min-width: 992px) {
+    .class-list-container {
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-pack: justify;
+              justify-content: space-between;
+     
+      
+    }
+}
+
+.form{
+    background: var(--clr-white);
+    padding: 2rem;
+    border-radius: var(--radius);
+}
+.class-list-container-left, .class-list-container-right{
+    /* background: var(--clr-white); */
+    border-radius: var(--radius);
+    padding: 2rem;
+    margin: 1rem 0;
+}
+
+/* .input{
+    display: block;
+} */
+
+ /* .container{
+    max-width: 1000px;
+    margin: 0 auto;
+}  */
+
+.box{
+    width: auto;
+}
+.box .input{
+    /* height: 42px; */
+    padding: 0.5rem 1.5rem;
+line-height: 1.5rem;
+font-size: 1rem;
+width: 100%;
+border: 1px solid #ccc;
+}
+
